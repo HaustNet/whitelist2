@@ -68,6 +68,7 @@ const styles = {
         border: 'none',
         borderRadius: '16px',
         cursor: 'pointer',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        fontWeight: '600'
     },
 };
