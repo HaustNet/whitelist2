@@ -28,7 +28,7 @@ const customChain = {
       url: "https://explorer-testnet.haust.app",
     },
   },
-  iconUrl: "https://haust.network/haust-token-96x96.png", // Ссылка на вашу иконку
+  iconUrl: "/token-haust.png", // Ссылка на вашу иконку
 };
 
 // Создаем конфигурацию Wagmi
@@ -43,7 +43,7 @@ const config = createConfig(
     appName: "Whitelist Haust Testnet",
     appDescription: "Whitelist Haust Testnet",
     appUrl: "https://whitelist.haust.app",
-    appIcon: "https://haust.network/haust-token-96x96.png", // Иконка приложения
+    appIcon: "/chain-logo-200.png", // Иконка приложения
   })
 );
 
