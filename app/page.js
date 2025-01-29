@@ -7,35 +7,9 @@ import Disclaimer from './components/Disclaimer';
 import { useAccount } from 'wagmi';
 
 export default function Home() {
-    const [showPopup, setShowPopup] = useState(true);
-    const [isWhitelisted, setIsWhitelisted] = useState(false);
-    const [buttonStates, setButtonStates] = useState({
-        twitter: false,
-        telegramChat: false,
-        telegramChannel: false,
-    });
-
-    const { address, isConnected } = useAccount();
-    const areAllCompleted = Object.values(buttonStates).every((state) => state);
-
-    const closePopup = () => {
-        setShowPopup(false);
-    };
-
-    const handleButtonClick = (buttonKey) => {
-        setButtonStates((prev) => ({ ...prev, [buttonKey]: 'loading' }));
-        setTimeout(() => {
-            setButtonStates((prev) => ({ ...prev, [buttonKey]: true }));
-        }, 5000);
-    };
-
-    const handleWhitelist = () => {
-        setIsWhitelisted(true); // Устанавливаем состояние "whitelisted"
-    };
 
     return (
         <div className="container">
-            {showPopup && <Disclaimer onAccept={closePopup} />}
             <Header />
             <main className="main">
                 
